@@ -61,8 +61,14 @@ public class WriteNewTaskActivity extends AppCompatActivity {
         if (nameTask.isEmpty() && mainTextTask.isEmpty()) {
             Toast.makeText(WriteNewTaskActivity.this, R.string.nothing_to_write, Toast.LENGTH_LONG).show();
         } else {
+            if (nameTask.isEmpty())
+                nameTask = getString(R.string.txt_empty_header);
+
             if (editTaskOrNo) {
-                AppExecuted.getInstance().getSecondIO().execute(() -> myDbManager.writeToDb(nameTask, mainTextTask));
+                String finalNameTask = nameTask;
+                AppExecuted.getInstance().getSecondIO().execute(() -> {
+                    myDbManager.writeToDb(finalNameTask, mainTextTask);
+                });
                 Toast.makeText(WriteNewTaskActivity.this, R.string.task_created, Toast.LENGTH_LONG).show();
             } else {
                 myDbManager.updateItemInList(nameTask, mainTextTask, boxWithTasks.getId());

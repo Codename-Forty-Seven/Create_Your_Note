@@ -14,6 +14,7 @@
     <string name="about_app">Create new tasks and edit information about tasks!</string>
     <string name="txt_delete_success_first">Task: </string>
     <string name="txt_delete_success_second">Delete successfully!</string>
+    <string name="txt_empty_header">Empty Name Task</string>
 
     //WriteNewTaskActivity text
     <string name="write_here_main_text_task">Write here text task</string>
