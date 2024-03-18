@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Task Manager</string>
+
+    // Buttons / ContentDescription
+    <string name="btn_delete">Delete</string>
+    <string name="btn_add_photo">Delete</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_save">Save Task</string>
+
+    //MainActivity text
+    <string name="list_name_field">Search here name of list</string>
+    <string name="add_new_task">Create new Task</string>
+    <string name="search_task">Find Task</string>
+    <string name="about_app">Create new tasks and edit information about tasks!</string>
+    <string name="txt_delete_success_first">Task: </string>
+    <string name="txt_delete_success_second">Delete successfully!</string>
+
+    //WriteNewTaskActivity text
+    <string name="write_here_main_text_task">Write here text task</string>
+    <string name="write_here_name_task">Write here name task</string>
+    <string name="nothing_to_write">Sorry, you write nothing! We can`t save it!</string>
+    <string name="task_created">Success! We are save it!</string>
+
+    //Design Every Task
+    <string name="explain_task_txt">Here user write his task</string>
+</resources>

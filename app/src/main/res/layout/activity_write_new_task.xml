@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".WriteNewTaskActivity">
+
+    <data>
+
+        <variable
+            name="noteItem"
+            type="com.brainetrainer.taskmanager.adapters.BoxWithTasks" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_for_task_manager">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineForImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintGuide_percent="0.3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edTxtNameTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:autofillHints="@string/write_here_name_task"
+            android:background="@drawable/design_for_item_tasks"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:hint="@string/write_here_name_task"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:text="@{noteItem.getNameTask}"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edTxtMainTextTask"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:autofillHints="@string/write_here_main_text_task"
+            android:background="@drawable/design_for_item_tasks"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:gravity="top|left"
+            android:hint="@string/write_here_main_text_task"
+            android:inputType="textMultiLine|text"
+            android:padding="10dp"
+            android:text="@{noteItem.getMainTextTask}"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnSaveTask"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edTxtNameTask" />
+
+        <Button
+            android:id="@+id/btnSaveTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/bg_main_edge"
+            android:text="@string/btn_save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+    
